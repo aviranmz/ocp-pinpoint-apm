@@ -19,7 +19,7 @@ RUN cd /usr/local/src/ && \
     yum install git wget tar hostname lsof net-tools apache-maven -y && \
     wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://gofile.me/2WiPH/Of9Tr9VIk && \
     rpm -i jdk-6u45-linux-amd64.rpm --force && \
-    rpm -i jdk-8u181-linux-x64.rpm --force && \
+    rpm -i jdk-8u201-linux-x64.rpm --force && \
     yum clean all && \
     rm -rf jdk-6u45-linux-amd64.rpm jdk-8u181-linux-x64.rpm epel-release-7-8.noarch.rpm
 
