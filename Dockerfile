@@ -17,7 +17,7 @@ RUN cd /usr/local/src/ && \
     cp epel-apache-maven.repo /etc/yum.repos.d/ && \
     rpm -i epel-release-7-8.noarch.rpm && \
     yum install git wget tar hostname lsof net-tools apache-maven -y && \
-    wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://gofile.me/2WiPH/Of9Tr9VIk && \
+    wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://84.108.219.118:8045/apk/jdk-8u201-linux-x64.rpm && \
     rpm -i jdk-6u45-linux-amd64.rpm --force && \
     rpm -i jdk-8u201-linux-x64.rpm --force && \
     yum clean all && \
