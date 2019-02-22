@@ -10,7 +10,7 @@ ENV JAVA_6_HOME /usr/java/jdk1.6.0_45
 ENV JAVA_7_HOME /usr/java/jdk1.8.0_201-amd64
 ENV JAVA_8_HOME /usr/java/jdk1.8.0_201-amd64
 ENV JAVA_9_HOME /usr/java/jdk11.0.2-amd64
-ENV JAVA_HOME /usr/java/jdk1.8.0_201-amd64
+ENV JAVA_HOME /usr/java/jdk-9.0.4-amd64
 
 COPY src/* /usr/local/src/
 
@@ -19,10 +19,10 @@ RUN cd /usr/local/src/ && \
     rpm -i epel-release-7-8.noarch.rpm && \
     yum install git wget tar hostname lsof net-tools apache-maven -y && \
     wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://84.108.219.118:8045/apk/jdk-8u201-linux-x64.rpm && \
-    wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://84.108.219.118:8045/apk/jdk-11.0.2_linux-x64_bin.rpm && \
+    wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://84.108.219.118:8045/apk/jdk-9.0.4_linux-x64_bin.rpm && \
     rpm -i jdk-6u45-linux-amd64.rpm --force && \
     rpm -i jdk-8u201-linux-x64.rpm --force && \
-    rpm -i jdk-8u201-linux-x64.rpm --force && \
+    rpm -i jdk-9.0.4_linux-x64_bin.rpm --force && \
     yum clean all && \
     rm -rf jdk-6u45-linux-amd64.rpm jdk-8u181-linux-x64.rpm epel-release-7-8.noarch.rpm
 
