@@ -7,7 +7,7 @@ LABEL io.k8s.description="Platform for running Pinpoint Application Performance 
       io.openshift.tags="pinpoint-apm"
 
 ENV JAVA_6_HOME /usr/java/jdk1.6.0_45
-ENV JAVA_7_HOME /usr/java/jdk1.8.0_201-amd64
+ENV JAVA_7_HOME /usr/java/jdk1.7.0_79-amd64
 ENV JAVA_8_HOME /usr/java/jdk1.8.0_201-amd64
 ENV JAVA_9_HOME /usr/java/jdk-9.0.4-amd64
 ENV JAVA_HOME /usr/java/jdk1.8.0_201-amd64
