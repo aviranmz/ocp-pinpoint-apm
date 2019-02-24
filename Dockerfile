@@ -19,7 +19,7 @@ RUN cd /usr/local/src/ && \
     rpm -i epel-release-7-8.noarch.rpm && \
     yum install git wget tar hostname lsof net-tools apache-maven -y && \
     wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://84.108.219.118:8045/apk/jdk-6u45-linux-amd64.rpm && \
-    wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://84.108.219.118:8045/apk/jdk-7u80-linux-x64.rpm && \
+    wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://84.108.219.118:8045/apk/jdk-7u79-linux-x64.rpm && \
     wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://84.108.219.118:8045/apk/jdk-8u201-linux-x64.rpm && \
     wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://84.108.219.118:8045/apk/jdk-9.0.4_linux-x64_bin.rpm && \
     rpm -i jdk-6u45-linux-amd64.rpm --force && \
