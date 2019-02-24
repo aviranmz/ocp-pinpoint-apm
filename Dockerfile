@@ -35,7 +35,7 @@ COPY src/pinpoint-start.sh /root/
 RUN chmod +x /root/howto-startup.sh /root/pinpoint-start.sh && \
     echo "/root/howto-startup.sh" >> /etc/bashrc
 
-RUN git clone https://github.com/naver/pinpoint.git /pinpoint && \
+RUN git clone https://github.com/aviranmz/pinpoint.git /pinpoint && \
     mkdir /pinpoint/logs
 WORKDIR /pinpoint
 RUN mvn install -Dmaven.test.skip=true -B
