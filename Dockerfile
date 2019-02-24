@@ -30,14 +30,20 @@ RUN cd /usr/local/src/ && \
     yum clean all && \
     rm -rf jdk-6u45-linux-amd64.rpm jdk-8u201-linux-x64.rpm jdk-7u80-linux-x64.rpm jdk-9.0.4_linux-x64_bin.rpm epel-release-7-8.noarch.rpm
 
+RUN cd / &&/
 RUN cd /usr/java/jdk1.6.0_45 &&/
 RUN ls &&/
+RUN cd / &&/
 RUN cd /usr/java/jdk1.7.0_79-amd64 &&/
 RUN ls &&/
+RUN cd / &&/
 RUN cd /usr/java/jdk1.8.0_201-amd64 &&/
 RUN ls &&/
+RUN cd / &&/
 RUN cd /usr/java/jdk-9.0.4-amd64 &&/
 RUN ls &&/
+RUN cd / &&/
+RUN cd /usr/local/src/ && \
 
 COPY src/howto-startup.sh /root/
 COPY src/pinpoint-start.sh /root/
