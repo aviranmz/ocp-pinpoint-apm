@@ -39,6 +39,7 @@ RUN git clone https://github.com/aviranmz/pinpoint.git /pinpoint && \
     mkdir /pinpoint/logs
 WORKDIR /pinpoint
 RUN mvn install DskipTests=true -Plocal Dmaven.doc.skip=true -B -V | grep -Fv '[copy'
+RUN mvn install DskipTests=true -Plocal Dmaven.doc.skip=true -B -V | grep -Fv '[copy'
 
 
 RUN sed -i '/^CLOSE_WAIT_TIME/c\CLOSE_WAIT_TIME=1000' /pinpoint/quickstart/bin/start-collector.sh && \
