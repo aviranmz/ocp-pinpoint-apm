@@ -38,7 +38,7 @@ RUN chmod +x /root/howto-startup.sh /root/pinpoint-start.sh && \
 RUN git clone https://github.com/aviranmz/pinpoint.git /pinpoint && \
     mkdir /pinpoint/logs
 WORKDIR /pinpoint
-RUN mvn clean install -Dmaven.test.skip=true -B -X
+RUN mvn install DskipTests=true -Plocal Dmavendoc.skip=true -B -V | grep -Fv '[cppy'
 
 
 RUN sed -i '/^CLOSE_WAIT_TIME/c\CLOSE_WAIT_TIME=1000' /pinpoint/quickstart/bin/start-collector.sh && \
