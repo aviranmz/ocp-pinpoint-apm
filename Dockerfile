@@ -12,6 +12,8 @@ ENV JAVA_8_HOME /usr/java/jdk1.8.0_201-amd64
 ENV JAVA_9_HOME /usr/java/jdk-9.0.4-amd64
 ENV JAVA_HOME /usr/java/jdk1.8.0_201-amd64
 
+
+RUN sudo find /usr/ -name *jdk
 COPY src/* /usr/local/src/
 
 RUN cd /usr/local/src/ && \
