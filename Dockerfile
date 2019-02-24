@@ -12,6 +12,8 @@ ENV JAVA_8_HOME /usr/java/jdk1.8.0_201-amd64
 ENV JAVA_9_HOME /usr/java/jdk-9.0.4-amd64
 ENV JAVA_HOME /usr/java/jdk1.8.0_201-amd64
 
+COPY src/* /usr/local/src/
+
 RUN cd /usr/local/src/ && \
     cp epel-apache-maven.repo /etc/yum.repos.d/ && \
     rpm -i epel-release-7-8.noarch.rpm && \
@@ -67,5 +69,4 @@ WORKDIR /pinpoint
 VOLUME [/pinpoint]
 
 CMD ["sh","/root/pinpoint-start.sh"]
-
 #CMD ["sleep","1000000"]
