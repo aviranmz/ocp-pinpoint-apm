@@ -46,12 +46,12 @@ RUN sed -i '/^CLOSE_WAIT_TIME/c\CLOSE_WAIT_TIME=1000' /pinpoint/quickstart/bin/s
     sed -i '/^CLOSE_WAIT_TIME/c\CLOSE_WAIT_TIME=1000' /pinpoint/quickstart/bin/start-testapp.sh
 
 WORKDIR quickstart/hbase
-ADD http://archive.apache.org/dist/hbase/hbase-1.0.3/hbase-1.0.3-bin.tar.gz ./
-RUN tar -xf hbase-1.0.3-bin.tar.gz && \
-    rm hbase-1.0.3-bin.tar.gz && \
-    ln -s hbase-1.0.3 hbase && \
-    cp ../conf/hbase/hbase-site.xml hbase-1.0.3/conf/ && \
-    chmod +x hbase-1.0.3/bin/start-hbase.sh && \
+ADD https://archive.apache.org/dist/hbase/1.4.9/hbase-1.4.9-bin.tar.gz ./
+RUN tar -xf hbase-1.4.9-bin.tar.gz && \
+    rm hbase-1.4.9-bin.tar.gz && \
+    ln -s hbase-1.4.9 hbase && \
+    cp ../conf/hbase/hbase-site.xml hbase-1.4.9/conf/ && \
+    chmod +x hbase-1.4.9/bin/start-hbase.sh && \
     chgrp -R root /pinpoint && \
     chmod 775 -R /pinpoint && \
     chmod 775 -R /tmp
