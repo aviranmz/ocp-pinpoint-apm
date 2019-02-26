@@ -18,10 +18,10 @@ RUN cd /usr/local/src/ && \
     cp epel-apache-maven.repo /etc/yum.repos.d/ && \
     rpm -i epel-release-7-8.noarch.rpm && \
     yum install git wget tar hostname lsof net-tools apache-maven -y && \
-    wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://193.43.244.78/jdk-6u45-linux-amd64.rpm && \
-    wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://193.43.244.78/jdk-7u79-linux-x64.rpm && \
-    wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://193.43.244.78/jdk-8u201-linux-x64.rpm && \
-    wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://193.43.244.78/jdk-9.0.4_linux-x64_bin.rpm && \
+    wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://mtrbucket:7990/projects/MTR/repos/pinpoint/browse/src/jdk-6u45-linux-amd64.rpm && \
+    wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://mtrbucket:7990/projects/MTR/repos/pinpoint/browse/src/jdk-7u79-linux-x64.rpm && \
+    wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://mtrbucket:7990/projects/MTR/repos/pinpoint/browse/src/jdk-8u201-linux-x64.rpm && \
+    wget --no-check-certificate -c --header "Cookie: oraclelicense=accept-securebackup-cookie" http://mtrbucket:7990/projects/MTR/repos/pinpoint/browse/src/jdk-9.0.4_linux-x64_bin.rpm && \
     rpm -i jdk-6u45-linux-amd64.rpm --force && \
     rpm -i jdk-7u79-linux-x64.rpm --force && \
     rpm -i jdk-8u201-linux-x64.rpm --force && \
